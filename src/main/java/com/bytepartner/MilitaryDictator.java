@@ -1,4 +1,4 @@
-package org.example;
+package com.bytepartner;
 
 public class MilitaryDictator extends Leader implements PowerActions{
 
@@ -9,24 +9,34 @@ public class MilitaryDictator extends Leader implements PowerActions{
         this.militaryRank = militaryRank;
     }
 
+    @Override
+    void printDetails() {
+        super.printDetails();
+        System.out.println("Military Rank: " + militaryRank);
+    }
 
     @Override
     void giveSpeech() {
-        //super.giveSpeech();
+        System.out.println("Military speech: We will defend our nation with honor and strength.");
     }
 
     @Override
     public void holdParade() {
-        PowerActions.super.holdParade();
+        System.out.println("Organizing a military parade to showcase our strength.");
     }
 
     @Override
-    public void implementPolicy() {
-        PowerActions.super.implementPolicy();
+    public void implementPolicy(){
+        System.out.println("Implementing policy through strict military regulations.");
     }
 
     @Override
     public void repressOpposition() {
-        PowerActions.super.repressOpposition();
+        System.out.println("Repressing opposition through strict military regulations.");
+    }
+
+    @Override
+    public void consolidatePower() {
+        System.out.println("Consolidating power through military might.");
     }
 }

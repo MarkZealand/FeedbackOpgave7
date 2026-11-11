@@ -1,14 +1,10 @@
-package org.example;
+package com.bytepartner;
 
 public interface PowerActions {
 
-    default void implementPolicy(){
+    void implementPolicy();
+    void repressOpposition();
+    void holdParade();
+    void consolidatePower();
 
-    }
-    default void repressOpposition(){
-
-    }
-    default void holdParade(){
-
-    }
 }

@@ -1,31 +1,40 @@
-package org.example;
+package com.bytepartner;
 
 public class EducationalDictator extends Leader implements PowerActions{
 
-    String educationPolicy;
+    String university;
 
-    public EducationalDictator(String name, int age, String country, String educationPolicy) {
+    public EducationalDictator(String name, int age, String country, String university) {
         super(name, age, country);
-        this.educationPolicy = educationPolicy;
+        this.university = university;
     }
-
+    @Override
+    public void printDetails() {
+        super.printDetails();
+        System.out.println("University: " + university);
+    }
     @Override
     void giveSpeech() {
-        //super.giveSpeech();
+        System.out.println("Educational speech: Here's your homework for the next week. You're welcome!");
     }
 
     @Override
     public void holdParade() {
-        PowerActions.super.holdParade();
+        System.out.println("Organizing a parade to celebrate academic achievements.");
     }
 
     @Override
     public void implementPolicy() {
-        PowerActions.super.implementPolicy();
+        System.out.println("Implementing policy through mandatory study hours.");
     }
 
     @Override
     public void repressOpposition() {
-        PowerActions.super.repressOpposition();
+        System.out.println("Repressing opposition through strict academic regulations.");
+    }
+
+    @Override
+    public void consolidatePower() {
+        System.out.println("Consolidating power through plenty of homework.");
     }
 }
